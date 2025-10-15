@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       title: "Barber",
-      description: "Landing page moderna e responsiva para barbearia, com design elegante e animações suaves.",
+      description: "Landing page moderna e responsiva para barbearia, com design elegante e animações suaves. Possui comentários de clientes localização e Whatsapp.",
       image: barberCapa,
       technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
       liveUrl: "https://renanponick.github.io/SPA-barber/"
@@ -53,7 +53,7 @@ const Projects = () => {
       title: "Petshop",
       description: "SPA para pet shop com serviços de banho, tosa, produtos, agendamentos e carrinho de compras integrado com WhatsApp.",
       image: petshopCapa,
-      technologies: ["HTML", "CSS", "JavaScript", "E-commerce", "Responsive Design"],
+      technologies: ["HTML", "CSS", "JavaScript", "E-commerce", "Responsive"],
       liveUrl: "https://renanponick.github.io/SPA-petshop/"
     },
     {
@@ -67,7 +67,7 @@ const Projects = () => {
       title: "Loja de Celular",
       description: "Loja de celulares e acessórios, com catálogo de produtos, conserto de aparelhos, carrinho de compras e integração com WhatsApp.",
       image: shopcellCapa,
-      technologies: ["HTML", "CSS", "JavaScript", "E-commerce", "Responsive Design"],
+      technologies: ["HTML", "CSS", "JavaScript", "E-commerce", "Responsive"],
       liveUrl: "https://renanponick.github.io/SPA-shopcell/"
     }
   ]
@@ -88,7 +88,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -97,7 +97,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-2xl transition-all group"
+              className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-2xl transition-all group w-full sm:w-[45%] lg:w-[30%] max-w-[600px]"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden bg-muted">
