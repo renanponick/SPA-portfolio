@@ -89,9 +89,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="relative max-w-xs sm:max-w-md md:max-w-lg mx-auto"
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
+            <div className="relative w-full aspect-square max-w-lg mx-auto overflow-hidden">
               <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
@@ -117,12 +117,12 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute top-10 -right-10 w-20 h-20 bg-primary/20 rounded-lg backdrop-blur-sm"
+                className="absolute top-10 right-0 sm:-right-10 w-16 h-16 sm:w-20 sm:h-20 bg-primary/20 rounded-lg backdrop-blur-sm"
               />
               <motion.div
                 animate={{ y: [0, 20, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute bottom-10 -left-10 w-16 h-16 bg-secondary/20 rounded-full backdrop-blur-sm"
+                className="absolute bottom-10 left-0 sm:-left-10 w-12 h-12 sm:w-16 sm:h-16 bg-secondary/20 rounded-full backdrop-blur-sm"
               />
             </div>
           </motion.div>

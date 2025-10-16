@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('inicio');
+  const [activeSection, setActiveSection] = useState('projetos');
 
   const navItems = [
     { id: 'inicio', label: 'Início' },
@@ -42,7 +42,14 @@ const Header = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offset = 80; // Navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
       setIsMobileMenuOpen(false);
     }
   };
@@ -50,20 +57,22 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
-      }`}
+        isScrolled || isMobileMenuOpen
+           ? 'bg-background/80 backdrop-blur-lg shadow-lg'
+           : 'bg-transparent'
+        }`}
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold text-primary cursor-pointer"
             onClick={() => scrollToSection('inicio')}
           >
             Renan Ponick
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -71,13 +80,12 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-primary relative ${
-                  activeSection === item.id ? 'text-primary' : 'text-foreground/70'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-primary relative ${activeSection === item.id ? 'text-primary' : 'text-foreground/70'
+                  }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <motion.div
+                  <div
                     layoutId="activeSection"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                   />
@@ -118,28 +126,27 @@ const Header = () => {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div
+            <div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden mt-4 pb-4"
             >
-              <div className="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`text-left py-2 px-4 rounded-lg transition-colors ${
-                      activeSection === item.id
+                    className={`text-left py-2 px-4 rounded-lg transition-colors ${activeSection === item.id
                         ? 'bg-primary text-primary-foreground'
                         : 'hover:bg-accent'
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </button>
                 ))}
-              </div>
-            </motion.div>
+              </nav>
+            </div>
           )}
         </AnimatePresence>
       </nav>

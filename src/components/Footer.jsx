@@ -69,8 +69,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} Renan Ponick. Feito com{' '}
-            <Heart className="w-4 h-4 text-red-500 fill-red-500" /> e muito código.
+            © {currentYear} Renan Ponick.
           </p>
         </div>
       </div>
