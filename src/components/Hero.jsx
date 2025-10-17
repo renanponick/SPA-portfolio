@@ -91,7 +91,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative max-w-xs sm:max-w-md md:max-w-lg mx-auto"
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto overflow-hidden">
+            <div className="relative w-full aspect-square max-w-lg mx-auto overflow-hidden md:overflow-visible">
               <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
