@@ -13,8 +13,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/renan-ponick-9107a5174',
-      link: 'https://www.linkedin.com/in/renan-ponick-9107a5174/',
+      value: 'linkedin.com/in/renanponick',
+      link: 'https://www.linkedin.com/in/renanponick/',
     },
     {
       icon: Github,
