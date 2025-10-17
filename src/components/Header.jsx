@@ -7,7 +7,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('projetos');
+  const [activeSection, setActiveSection] = useState('inicio');
 
   const navItems = [
     { id: 'inicio', label: 'Início' },
