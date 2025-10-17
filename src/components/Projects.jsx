@@ -67,7 +67,7 @@ const Projects = () => {
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Ver Demo
+                    { project.isClient ? "Ver Site do Cliente" : "Ver Demo" }
                   </Button>
                 </div>
               </div>

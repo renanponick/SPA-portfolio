@@ -15,14 +15,16 @@ export const projects = [
       description: "Plantaforma de cursos do SENAC Hub - Joinville, com apresentação dos cursos disponíveis, filtros e contato direto via Whatsapp.",
       image: hubCapa,
       technologies: ["HTML", "CSS", "JavaScript", "Responsivo", "UI/UX"],
-      liveUrl: "https://senachubdetecnologia.sc.senac.br/"
+      liveUrl: "https://senachubdetecnologia.sc.senac.br/",
+      isClient: true
     },
     {
       title: "SENAC Tech - Joinville",
       description: "Plataforma de Evento do SENAC Hub - Joinville, com apresentação das palestras, workshops, detalhamentos dos palestrantes e apoiadores.",
       image: techCapa,
       technologies: ["HTML", "CSS", "JavaScript", "Responsivo", "UI/UX"],
-      liveUrl: "http://senactech.sc.senac.br/"
+      liveUrl: "http://senactech.sc.senac.br/",
+      isClient: true
     },
     {
       title: "Doceria",
