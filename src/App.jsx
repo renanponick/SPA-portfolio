@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 import WhatsAppButton from './components/WhatsAppButton';
+import Customers from './components/Customers';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Customers />
           <Projects />
           {/* <Skills />
           <Experience /> */}
