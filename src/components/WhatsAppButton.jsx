@@ -3,9 +3,8 @@ import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    // Número do WhatsApp do Senac (será fornecido pelo Edi)
-    const phoneNumber = '554734316606'; // Placeholder - aguardando número real
-    const message = 'Olá! Estava olhando o site do Senac Hub e gostaria de saber mais informações sobre os cursos do Senac Hub Técnologia.';
+    const phoneNumber = '5547992923380'
+    const message = 'Olá! Estava olhando seu portfólio e gostaria de fazer um orçamento.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
