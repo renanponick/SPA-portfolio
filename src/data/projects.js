@@ -11,6 +11,14 @@ import techCapa from '../assets/senac/capa-tech.png'
 
 export const projects = [
     {
+      title: "Desmotiva",
+      description: "Aplicativo de desmotivação e inspiração reversa, acido e engraçado.",
+      image: hubCapa,
+      technologies: ["React", "Typescript", "Node.js", "Express", "UI/UX"],
+      liveUrl: "https://desmotiva.initcode.com.br/",
+      isClient: true
+    },
+    {
       title: "SENAC HUB - Joinville",
       description: "Plantaforma de cursos do SENAC Hub - Joinville, com apresentação dos cursos disponíveis, filtros e contato direto via Whatsapp.",
       image: hubCapa,
