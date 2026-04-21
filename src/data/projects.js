@@ -8,12 +8,13 @@ import salonCapa from '../assets/salon/capa-dark.png'
 import shopcellCapa from '../assets/shopcell/capa-light.png'
 import hubCapa from '../assets/senac/capa-hub.png'
 import techCapa from '../assets/senac/capa-tech.png'
+import desmotivaCapa from '../assets/desmotiva/capa.png'
 
 export const projects = [
     {
       title: "Desmotiva",
       description: "Aplicativo de desmotivação e inspiração reversa, acido e engraçado.",
-      image: hubCapa,
+      image: desmotivaCapa,
       technologies: ["React", "Typescript", "Node.js", "Express", "UI/UX"],
       liveUrl: "https://desmotiva.initcode.com.br/",
       isClient: true
